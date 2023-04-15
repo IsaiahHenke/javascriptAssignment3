@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+	<p>Total Count: <span id="count">0</span></p>
+	<button id="add">Add</button>
+	<button id="subtract">Subtract</button>
+
+	<script>
+		// Get the count element from the HTML page
+		const countElement = document.getElementById("count");
+		
+		// Initialize the count to zero
+		let count = 0;
+		
+		// Get the add button from the HTML page
+		const addButton = document.getElementById("add");
+		// Add an event listener to the add button
+		addButton.addEventListener("click", function() {
+			// Increment the count by 1
+			count += 1;
+			// Update the count element with the new count
+			countElement.innerText = count;
+		});
+		
+		// Get the subtract button from the HTML page
+		const subtractButton = document.getElementById("subtract");
+		// Add an event listener to the subtract button
+		subtractButton.addEventListener("click", function() {
+			// Decrement the count by 1
+			count -= 1;
+			// Update the count element with the new count
+			countElement.innerText = count;
+		});
+	</script>
+</body>
+</html>
